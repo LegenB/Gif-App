@@ -8,10 +8,20 @@ export const useFetchGifs = (category) => {
 
     const getImages = async() =>{
         const newImages = await getGifs(category)
-    
+        console.log(newImages);
         setImages(newImages);
         setIsLoading(false);
-    
+        
+    }
+
+    //Funcion borrar imagen de la categoria
+    const delImage = (llave) =>{
+        if (images.length == 1) {
+            return
+        }
+        const nuevoArray = images.filter((images) => images.id !== llave);
+        setImages(nuevoArray);
+
     }
 
     useEffect( () => {
@@ -20,6 +30,7 @@ export const useFetchGifs = (category) => {
 
     return{
         images:images,
-        isLoading:isLoading
+        isLoading:isLoading,
+        delImage
     }
 }

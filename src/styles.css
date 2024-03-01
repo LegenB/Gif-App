@@ -1,11 +1,25 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(234, 234, 234);
   }
-  
+  html{
+    position: relative;
+    background-image: linear-gradient(to bottom, #c0b3d4, #b5b2d2, #abb1ce, #a3afca, #9badc4, #97b0c4, #95b3c3, #94b6c1, #97bec3, #9dc6c3, #a7cdc2, #b3d4c1);
+    min-height: 100%;
+    max-width: 100vw;
+    
+  }
+
   body {
-    padding: 60px;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 100px;
+  
   }
+  .Conteneder_Full{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   
   input {
     background-color: white;
@@ -15,7 +29,7 @@
     font-size: 1.2rem;
     outline: none;
     padding: 10px 15px;
-    width: 100%;
+    width: 97%;
   }
   
   h2 {
@@ -35,6 +49,7 @@
   }
   
   .card {
+    position: relative;
     align-content: center;
     align-items: center;
     background-color: white;
@@ -61,3 +76,119 @@
   .card img {
     width: 100%;
   }
+  .Contenedor_Logo{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -20px;
+    
+  }
+  .Logo{
+    height: 130px;
+    width: 130px;
+  }
+  .title{
+    font-size: 40px;
+    text-align: center;
+    
+  }
+
+  .Contenedor_Titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Titulo_Categoria{
+    width: 100%;
+    margin: 0;
+  }
+  .boton_categoria{
+    padding: 8px 16px;
+
+  }
+
+  .form_container{
+    text-align: -webkit-center;
+  
+  }
+  .text_input{
+    width: auto;
+  }
+
+  /* Boton eliminar */
+  .btn_borrar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s; 
+  }
+
+  .card:hover .btn_borrar {
+    opacity: 1; 
+  }
+
+  .button {
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    gap: 2px;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+    gap: 0;
+  }
+  
+  .bin-top {
+    transform-origin: bottom right;
+  }
+  .button:hover .bin-top {
+    transition-duration: 0.5s;
+    transform: rotate(160deg);
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+   
+  }
+  
+  .footer-bottom {
+    font-size: 0.8em;
+  }
+  
+
+
+  
